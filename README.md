@@ -1,6 +1,7 @@
 ## 🧭 Syncthing Setup Guide
 
 ### ✅ What is Syncthing?
+
 Syncthing is a free, decentralized file synchronization tool that lets you sync files between devices securely — no cloud involved.
 
 ---
@@ -8,20 +9,32 @@ Syncthing is a free, decentralized file synchronization tool that lets you sync 
 ### 🖥️ Step 1: Install Syncthing
 
 #### **Linux (Debian/Ubuntu):**
+
 ```bash
 sudo apt install syncthing
 ```
 
 #### **Arch Linux:**
+
 ```bash
 sudo pacman -S syncthing
 ```
 
+#### **Fedora:**
+
+```bash
+sudo dnf install syncthing
+```
+
+> 💡 *Fedora має офіційний пакет Syncthing у своїх репозиторіях, тому додаткових репо не потрібно.*
+
 #### **Windows:**
-- Download the installer from: https://syncthing.net/downloads/
-- Extract the folder and run `syncthing.exe`.
+
+* Download the installer from: [https://syncthing.net/downloads/](https://syncthing.net/downloads/)
+* Extract the folder and run `syncthing.exe`.
 
 #### **macOS:**
+
 ```bash
 brew install syncthing
 ```
@@ -30,25 +43,29 @@ brew install syncthing
 
 ### 🚀 Step 2: Start Syncthing
 
-#### **Linux:**
+#### **Linux (including Fedora):**
+
 ```bash
 syncthing
 ```
 
 Or run it as a systemd service:
+
 ```bash
 systemctl --user enable syncthing
 systemctl --user start syncthing
 ```
 
 #### **Windows/macOS:**
+
 Just run `syncthing.exe` or use the app shortcut.
 
 ---
 
 ### 🌐 Step 3: Access the Web Interface
 
-- Open your browser and go to:
+* Open your browser and go to:
+
   ```
   http://localhost:8384
   ```
@@ -77,30 +94,36 @@ Just run `syncthing.exe` or use the app shortcut.
 ### 🔒 Optional: Enable GUI Authentication
 
 Go to **Settings > GUI**:
-- Enable `GUI Authentication`
-- Set a **username and password**
+
+* Enable `GUI Authentication`
+* Set a **username and password**
 
 ---
 
 ### 🔄 Optional: Auto-start Syncthing on Boot
 
 **Linux (Systemd user service):**
+
 ```bash
 systemctl --user enable syncthing
 ```
 
 **Windows:**
-- Add Syncthing shortcut to Startup folder.
+
+* Add Syncthing shortcut to Startup folder.
 
 ---
 
 ### 📦 Bonus: Sync over LAN only
-- Go to **Settings > Connections**:
-  - Disable “Global Discovery” and “Relay”.
-  - Keep only “Local Discovery” checked if you want LAN-only syncing.
+
+* Go to **Settings > Connections**:
+
+  * Disable “Global Discovery” and “Relay”.
+  * Keep only “Local Discovery” checked if you want LAN-only syncing.
 
 ---
 
 ### 📱 Mobile
-- Install the **Syncthing app** from Google Play or F-Droid.
-- Pair your phone like any other device.
+
+* Install the **Syncthing app** from Google Play or F-Droid.
+* Pair your phone like any other device.
